@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz AWS EC2</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div id="intro-screen" class="intro-screen">
+            <h1>Quiz sobre </h1><img src="awsbranca.png" alt="AWS Logo" class="aws-logo">
+            <button id="start-quiz">Iniciar Quiz</button>
+        </div>
+
+        <div id="loading-screen" class="hidden">
+            <div class="loader">Carregando...</div>
+        </div>
+
+        <div id="quiz-screen" class="quiz-screen hidden">
+            <img src="awsbranca.png" alt="AWS Logo" class="aws-logo">
+            <form id="quiz-form">
+                <div class="question-card">
+                    <p>1. Quais são os benefícios de utilizar tags nas instâncias EC2?</p>
+                    <label><input type="radio" name="q1" value="a"> Facilitar a organização e gerenciamento das instâncias.</label><br>
+                    <label><input type="radio" name="q1" value="b"> Permitir o controle de custos da instância.</label><br>
+                    <label><input type="radio" name="q1" value="c"> Identificar rapidamente as instâncias.</label><br>
+                    <label><input type="radio" name="q1" value="d"> Todas as alternativas acima.</label>
+                </div>
+
+                <div class="question-card hidden">
+                    <p>2. Qual é a função do grupo de segurança (firewall) em uma instância EC2?</p>
+                    <label><input type="radio" name="q2" value="a"> Controlar o acesso à instância por meio de regras de entrada e saída.</label><br>
+                    <label><input type="radio" name="q2" value="b"> Criar uma rede privada para a instância.</label><br>
+                    <label><input type="radio" name="q2" value="c"> Gerenciar o armazenamento da instância.</label><br>
+                    <label><input type="radio" name="q2" value="d"> Monitorar o desempenho da instância.</label>
+                </div>
+
+                <div class="question-card hidden">
+                    <p>3. Qual é a função da proteção contra encerramento em uma instância EC2?</p>
+                    <label><input type="radio" name="q3" value="a"> Impedir que a instância seja apagada por um erro.</label><br>
+                    <label><input type="radio" name="q3" value="b"> Controlar o acesso à instância por SSH.</label><br>
+                    <label><input type="radio" name="q3" value="c"> Criar uma página web simples na instância.</label><br>
+                    <label><input type="radio" name="q3" value="d"> Redimensionar a instância, aumentando a memória e o tamanho do disco.</label>
+                </div>
+
+                <div class="question-card hidden">
+                    <p>4. Qual é a porta padrão para o acesso HTTP?</p>
+                    <label><input type="radio" name="q4" value="a"> 22</label><br>
+                    <label><input type="radio" name="q4" value="b"> 80</label><br>
+                    <label><input type="radio" name="q4" value="c"> 443</label><br>
+                    <label><input type="radio" name="q4" value="d"> 21</label>
+                </div>
+
+                <div class="question-card hidden">
+                    <p>5. Qual é a recomendação para reduzir os custos das instâncias EC2?</p>
+                    <label><input type="radio" name="q5" value="a"> Utilizar o Free Tier da AWS.</label><br>
+                    <label><input type="radio" name="q5" value="b"> Desligar as instâncias quando não estiverem em uso.</label><br>
+                    <label><input type="radio" name="q5" value="c"> Redimensionar as instâncias para reduzir o consumo de recursos.</label><br>
+                    <label><input type="radio" name="q5" value="d"> Todas as alternativas acima.</label>
+                </div>
+
+                <div class="question-card hidden">
+                    <p>6. Qual a principal função do EC2 na AWS?</p>
+                    <label><input type="radio" name="q6" value="a"> Armazenar dados em nuvem.</label><br>
+                    <label><input type="radio" name="q6" value="b"> Criar e gerenciar bancos de dados.</label><br>
+                    <label><input type="radio" name="q6" value="c"> Criar e gerenciar servidores virtuais.</label><br>
+                    <label><input type="radio" name="q6" value="d"> Automatizar tarefas e funções.</label>
+                </div>
+
+                <button type="button" id="next-question">Próxima</button>
+            </form>
+            <div id="result" class="hidden"></div>
+        </div>
+    </div>
+
+            <div id="ranking-screen" class="hidden">
+            <h2>Ranking</h2>
+            <ul id="ranking-list"></ul>
+            <button id="restart-quiz">Iniciar Novo Quiz</button>
+        </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
